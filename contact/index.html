@@ -67,7 +67,7 @@
     <a href="../index.html" class="logo">
       <img src="../images/logo.png" alt="Blue Line Pool &amp; Spa" width="640" height="294" />
     </a>
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav" id="main-nav" aria-label="Primary">
       <a href="../index.html">Home</a>
       <a href="../services/">Services</a>
       <a href="../service-areas/">Service Areas</a>
@@ -78,6 +78,9 @@
     </nav>
     <div class="header-cta">
       <a class="btn btn-primary" href="../contact/">Free Quote</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav" onclick="document.getElementById('main-nav').classList.toggle('open'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded')==='true'?'false':'true');">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
   </div>
 </header>
@@ -97,7 +100,7 @@
 
 <section>
   <div class="container">
-    <div style="display:grid; grid-template-columns: 1fr 1.3fr; gap: var(--space-12); align-items:start;" class="contact-grid">
+    <div class="contact-grid">
       <div>
         <h2 style="font-family: var(--font-body); font-size: var(--text-2xl); margin-top:0;">Contact Blue Line</h2>
         <div style="display:grid; gap: var(--space-5); margin-top: var(--space-6);">

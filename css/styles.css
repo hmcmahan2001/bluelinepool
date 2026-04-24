@@ -82,8 +82,11 @@
 
 /* ---- Base ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; scroll-padding-top: 5rem; }
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; scroll-padding-top: 5rem; overflow-x: hidden; }
+html, body { max-width: 100%; }
+img, video, iframe { max-width: 100%; height: auto; }
 body {
+  overflow-x: hidden;
   min-height: 100dvh;
   line-height: 1.6;
   font-family: var(--font-body);
@@ -384,7 +387,9 @@ a.card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(1
 .feature-list svg { color: var(--color-primary); margin-top: 6px; }
 
 /* ---- Pricing card ---- */
-.pricing-card { background: var(--color-surface); border: 2px solid var(--color-primary-highlight); border-radius: var(--radius-lg); padding: var(--space-8); }
+.two-col-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: var(--space-16); align-items: start; }
+@media (max-width: 900px) { .two-col-grid { grid-template-columns: 1fr; gap: var(--space-10); } }
+.pricing-card { background: var(--color-surface); border: 2px solid var(--color-primary-highlight); border-radius: var(--radius-lg); padding: var(--space-8); min-width: 0; }
 .pricing-card .price { font-family: var(--font-display); font-size: var(--text-2xl); color: var(--color-primary); }
 .pricing-card .price small { font-size: var(--text-base); color: var(--color-text-muted); font-family: var(--font-body); font-weight: 400; }
 
