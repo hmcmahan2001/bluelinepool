@@ -314,12 +314,14 @@ a.card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(1
 
 /* ---- Footer ---- */
 .footer { background: var(--color-navy); color: rgba(255,255,255,0.75); padding-block: var(--space-16) var(--space-8); font-size: var(--text-sm); }
-.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--space-10); margin-bottom: var(--space-12); }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1.3fr; gap: var(--space-8); margin-bottom: var(--space-12); }
 @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); } }
 @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
 .footer h4 { color: #fff; font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--space-4); }
 .footer ul { list-style: none; display: grid; gap: var(--space-2); }
 .footer a { color: rgba(255,255,255,0.75); }
+.footer-nap p { color: rgba(255,255,255,0.75); margin: 0; }
+.footer-nap strong { color: #fff; }
 .footer a:hover { color: #fff; }
 .footer .logo { color: #fff; margin-bottom: var(--space-4); }
 .footer-brand p { font-size: var(--text-sm); margin-bottom: var(--space-5); }
