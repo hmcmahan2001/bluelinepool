@@ -299,6 +299,13 @@ section { padding-block: clamp(var(--space-12), 7vw, var(--space-24)); }
 .form textarea { min-height: 120px; resize: vertical; font-family: inherit; }
 .form-consent { display: flex; align-items: flex-start; gap: var(--space-2); font-size: var(--text-xs); color: var(--color-text-muted); }
 .form-consent input { width: auto; margin-top: 3px; }
+/* Honeypot field — hidden from humans, visible to bots */
+.hp-field { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+/* Form status messages (success / error) */
+.form-status { display: none; padding: var(--space-3) var(--space-4); border-radius: var(--radius-md); font-size: var(--text-sm); line-height: 1.5; }
+.form-status.form-status-success { display: block; background: #ecfdf5; color: #065f46; border: 1px solid #6ee7b7; }
+.form-status.form-status-error { display: block; background: #fef2f2; color: #991b1b; border: 1px solid #fca5a5; }
+.form-status a { color: inherit; text-decoration: underline; font-weight: 600; }
 
 /* ---- Footer ---- */
 .footer { background: var(--color-navy); color: rgba(255,255,255,0.75); padding-block: var(--space-16) var(--space-8); font-size: var(--text-sm); }
