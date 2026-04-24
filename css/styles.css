@@ -349,6 +349,9 @@ a.card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(1
 .prose li { margin-bottom: var(--space-2); }
 .prose blockquote { margin: var(--space-8) 0; padding: var(--space-4) var(--space-6); border-left: 3px solid var(--color-primary); background: var(--color-surface); font-style: italic; color: var(--color-text-muted); }
 .prose a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; }
+.prose a.btn { text-decoration: none; }
+.prose a.btn-primary { color: #fff; }
+.prose a.btn-primary:hover { color: #fff; }
 
 /* ---- FAQ accordion ---- */
 .faq { display: grid; gap: var(--space-3); max-width: var(--content-default); margin-inline: auto; }
